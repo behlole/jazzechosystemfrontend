@@ -9,6 +9,10 @@ const routes: Routes = [
     path: '',
     component: ModulesComponent
   },
+  {
+    path: 'users',
+    loadChildren: () => import('../Modules/User/user.module').then(m => m.UserModule),
+  },
 ];
 
 @NgModule({

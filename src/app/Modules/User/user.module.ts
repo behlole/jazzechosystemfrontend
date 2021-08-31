@@ -1,6 +1,5 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {AuthenticationModule} from "./authentication/authentication.module";
 import {RouterModule, Routes} from "@angular/router";
 import {UserComponent} from "./user.component";
 
@@ -10,6 +9,10 @@ const routes: Routes = [
     path: '',
     component: UserComponent,
   },
+  {
+    path: 'auth',
+    loadChildren: () => import('../User/authentication/authentication.module').then(m => m.AuthenticationModule),
+  }
 ]
 
 @NgModule({
