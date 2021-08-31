@@ -4,6 +4,7 @@ import {AuthenticationComponent} from "./authentication.component";
 import {RouterModule, Routes} from "@angular/router";
 import {LoginComponent} from './login/login.component';
 import {RegisterComponent} from './register/register.component';
+import {FormsModule} from "@angular/forms";
 
 
 const route: Routes = [
@@ -16,6 +17,7 @@ const route: Routes = [
   declarations: [AuthenticationComponent, LoginComponent, RegisterComponent],
   imports: [
     CommonModule,
+    FormsModule,
     RouterModule.forChild(route)
   ]
 })
